@@ -12,10 +12,7 @@ public class TC_01_Homepage extends baseClass {
     public void TC01_homepage() throws InterruptedException {
 
 
-        homePage hp2=new homePage(driver);
-        hp2.click_myaccount();
-        hp2.click_reglink();
-        Thread.sleep(5000);
+
     }
 
 
