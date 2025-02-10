@@ -19,6 +19,7 @@ public class newaccount extends basePage{
     @FindBy(xpath = "//input[@id='input-confirm']") WebElement confirmpassword;
     @FindBy(xpath = "//input[@name='agree']") WebElement tandc_checkbox;
     @FindBy(xpath = "//input[@value='Continue']") WebElement continue_button;
+    @FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")WebElement confirmation_msg;
 
     public void insert_firstname(String name)
     {
@@ -36,6 +37,7 @@ public class newaccount extends basePage{
     {
        email.sendKeys(email1);
     }
+
     public void insert_password(String password1)
     {
         password.sendKeys(password1);
@@ -51,6 +53,16 @@ public class newaccount extends basePage{
     public void cont_button()
     {
         continue_button.click();
+    }
+    public String  getconfirmtionmessage()
+    {   try {
+        return confirmation_msg.getText();
+    }
+    catch (Exception e)
+    {
+        return (e.getMessage());
+    }
+
     }
 
 
